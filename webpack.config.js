@@ -1,24 +1,27 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require("path");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
+  mode: "development",
+  entry: "./src/index.js",
   output: {
-    filename: 'index.[contenthash].js'
+    filename: "index.[contenthash].js"
+  },
+  devServer: {
+    contentBase: "./dist"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '二哈',
-      template: 'src/assets/index.html'
+      title: "二哈",
+      template: "src/assets/index.html"
     })
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
+        use: ["style-loader", "css-loader"]
+      }
+    ]
   }
 };
