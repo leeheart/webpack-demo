@@ -1,5 +1,5 @@
 import './x.js'
-import png from './assets/2.png' //png 为图片路径
+import png from './assets/1.jpg' //png 为图片路径
 console.log(png)
 
 const div = document.getElementById('app')
